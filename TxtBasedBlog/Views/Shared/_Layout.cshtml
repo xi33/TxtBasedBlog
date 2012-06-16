@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <h1>MVC File-Based Blog using Markdown</h1>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+		<div id="footer">
+			<p><i>Get Started with <a href="http://www.asp.net/mvc">ASP.NET MVC</a> today.</i></p>
+		</div>
+    </div>
+</body>
+</html>

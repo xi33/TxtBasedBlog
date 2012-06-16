@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TxtBasedBlog.Models.BlogListing>
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    foreach (var item in Model)
+    {
+    <div class="post">
+        <div class="img-post">
+            <a href="/@item.Url" title="@item.Title">
+                <img src="../../@item.Image" alt="" /></a>
+        </div>
+        <div class="inline">
+            <p>
+                <a href="@item.Url">@item.PostDate.ToString("MM/dd/yyyy") - @item.Title</a><br />@Html.Raw(item.ShortDescription)</p>
+        </div>
+    </div>
+    }
+}

@@ -1,0 +1,11 @@
+﻿@using TxtBasedBlog.Heplers
+@using TxtBasedBlog.Models
+@model TxtBasedBlog.Models.BlogPost
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>@Model.Title</h2>
+<p>Posted on @Convert.ToDateTime(Model.PostDate).ToString("dd MMM, yyyy") by @Model.Author - @Html.ActionLink("Back to Blog List", "Index")</p>
+@Html.Markdown(Model.Body)
